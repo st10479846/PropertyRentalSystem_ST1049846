@@ -83,33 +83,22 @@ public class PropertyRentalApplication {
 
                 // Execute the selected option
                 switch (choice) {
-                    case "1":
-                        // Add a new property
+                    case "1" -> // Add a new property
                         propertyManager.EnterProperty();
-                        break;
-                    case "2":
-                        // Search for an existing property
+                    case "2" -> // Search for an existing property
                         propertyManager.SearchProperty();
-                        break;
-                    case "3":
-                        // Update property details
+                    case "3" -> // Update property details
                         propertyManager.UpdateProperty();
-                        break;
-                    case "4":
-                        // Delete a property
+                    case "4" -> // Delete a property
                         propertyManager.DeleteProperty();
-                        break;
-                    case "5":
-                        // Display a report of all properties
+                    case "5" -> // Display a report of all properties
                         propertyManager.PropertyRentalReport();
-                        break;
-                    case "6":
+                    case "6" -> {
                         // Exit the application gracefully
                         propertyManager.ExitPropertyApplication();
                         running = false;
-                        break;
-                    default:
-                        // Handle invalid input
+                    }
+                    default -> // Handle invalid input
                         System.out.println("Invalid option! Please enter a number between 1-6.");
                 }
 
